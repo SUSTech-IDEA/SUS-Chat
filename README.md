@@ -9,7 +9,8 @@
 <div align="center">
 
 <p align="center">
-<img width="200px" src="https://github.com/SUSTech-IDEA/SUS-Chat/raw/main/assets/sustech.svg?sanitize=true">
+<img src="https://github.com/SUSTech-IDEA/SUS-Chat/raw/main/assets/sustech.svg?sanitize=true" width="200px">
+<img src="https://github.com/SUSTech-IDEA/SUS-Chat/raw/main/assets/ccnl.png?sanitize=true" width="200px">
 </p>
 
 <div style="display: inline-block;">
@@ -31,7 +32,7 @@
 <div style="display: inline-block;">
 
 <a rel="noopener nofollow" href="https://www.modelscope.cn/organization/sustc/">
-<img src="https://img.shields.io/badge/ModelScope-sustec-blue" style="margin: 0 0;">
+<img src="https://img.shields.io/badge/ModelScope-sustc-blue" style="margin: 0 0;">
 </a>
 
 </div>
@@ -164,10 +165,12 @@ model = AutoModelForCausalLM.from_pretrained(
 
 messages = [{"role": "user", "content": "hi"}]
 
-input_ids = tokenizer.encode(chat_template(messages), return_tensors="pt").to("cuda")
-output_ids = model.generate(input_ids.to("cuda"))
+input_ids = tokenizer.encode(
+    chat_template(messages), return_tensors="pt", add_special_tokens=False
+).to("cuda")
+output_ids = model.generate(input_ids.to("cuda"), max_length=256)
 response = tokenizer.decode(
-    output_ids[0][input_ids.shape[1] :], skip_special_tokens=True
+    output_ids[0][input_ids.shape[1] :], skip_special_tokens=False
 )
 
 messages.append({"role": "assistant", "content": response})
@@ -176,10 +179,12 @@ messages.append({"role": "assistant", "content": response})
 
 messages.append({"role": "user", "content": "What is the capital of China?"})
 
-input_ids = tokenizer.encode(chat_template(messages), return_tensors="pt").to("cuda")
-output_ids = model.generate(input_ids.to("cuda"))
+input_ids = tokenizer.encode(
+    chat_template(messages), return_tensors="pt", add_special_tokens=False
+).to("cuda")
+output_ids = model.generate(input_ids.to("cuda"), max_length=256)
 response = tokenizer.decode(
-    output_ids[0][input_ids.shape[1] :], skip_special_tokens=True
+    output_ids[0][input_ids.shape[1] :], skip_special_tokens=False
 )
 
 messages.append({"role": "assistant", "content": response})
