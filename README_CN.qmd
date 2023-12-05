@@ -11,17 +11,6 @@ jupyter:
     name: dl
 ---
 
-```{python}
-#| echo: false
-
-import evaluate
-import numpy as np
-import pandas as pd
-import random
-import plotly.graph_objects as go
-from datasets import Dataset, load_dataset
-from IPython.display import Markdown, display
-```
 
 <p align="left">
     中文</a>&nbsp ｜ &nbsp<a href="README.md">English</a>&nbsp 
@@ -31,8 +20,9 @@ from IPython.display import Markdown, display
 <div align="center">
 
 <p align="center">
-<img width="200px" src="https://github.com/SUSTech-IDEA/SUS-Chat/raw/main/assets/sustech.svg?sanitize=true">
+<img src="https://github.com/SUSTech-IDEA/SUS-Chat/raw/main/assets/sustech.svg?sanitize=true" width="200px"> <img src="https://github.com/SUSTech-IDEA/SUS-Chat/raw/main/assets/ccnl.png?sanitize=true" width="200px">
 </p>
+
 
 <div style="display: inline-block;">
 <a rel="noopener nofollow" href="https://github.com/SUSTech-IDEA/SUS-Chat/issues">
@@ -91,6 +81,18 @@ from IPython.display import Markdown, display
 SUS-Chat有力地证明了通过正确的指令微调，学术机构可以在不增加模型参数的情况下，通过开源的数据集和模型，获得更好的性能,
 这弥合了学术界和工业界的在大语言模型上的差距，为学术界和工业界的合作提供了新的可能性。
 
+```{python}
+#| echo: false
+
+import evaluate
+import numpy as np
+import pandas as pd
+import random
+import plotly.graph_objects as go
+from datasets import Dataset, load_dataset
+from IPython.display import Markdown, display
+```
+
 # 性能
 
 为了更好地评估SUS-Chat-34B模型的性能，我们在多个基准测试中进行了评估，并开源了评估框架[TLEM](https://huggingface.co/spaces/SUSTech/tlem)，以便于其他研究人员进行复现和比较。
@@ -115,7 +117,7 @@ hellaswag, arc, truthful-qa的表现, 衡量模型的常识性推理能力和幻
 
 # 用法
 
-SUS-Chat-34B是标准的LLaMA模型，应该可以无缝地与LLaMA生态系统兼任，我们提供下面的例子来展示如何使用它进行多轮对话
+SUS-Chat-34B是标准的LLaMA模型，应该可以无缝地与LLaMA生态系统兼容，我们提供下面的例子来展示如何使用它进行多轮对话
 
 ```{python}
 #| eval: false

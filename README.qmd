@@ -11,27 +11,16 @@ jupyter:
     name: dl
 ---
 
-```{python}
-#| echo: false
-
-import evaluate
-import numpy as np
-import pandas as pd
-import random
-import plotly.graph_objects as go
-from datasets import Dataset, load_dataset
-from IPython.display import Markdown, display
-```
-
 <p align="left">
     <a href="README_CN.md">中文</a>&nbsp ｜ &nbspEnglish&nbsp
 </p>
 <br><br>
 
+
 <div align="center">
 
 <p align="center">
-<img width="200px" src="https://github.com/SUSTech-IDEA/SUS-Chat/raw/main/assets/sustech.svg?sanitize=true">
+<img src="https://github.com/SUSTech-IDEA/SUS-Chat/raw/main/assets/sustech.svg?sanitize=true" width="200px"> <img src="https://github.com/SUSTech-IDEA/SUS-Chat/raw/main/assets/ccnl.png?sanitize=true" width="200px">
 </p>
 
 <div style="display: inline-block;">
@@ -48,7 +37,7 @@ from IPython.display import Markdown, display
 
 <div style="display: inline-block;">
 <a rel="noopener nofollow" href="https://www.modelscope.cn/organization/sustc/">
-  <img src="https://img.shields.io/badge/ModelScope-sustec-blue" style="margin: 0 0;">
+  <img src="https://img.shields.io/badge/ModelScope-sustc-blue" style="margin: 0 0;">
 </a>
 </div>
 
@@ -88,6 +77,19 @@ from IPython.display import Markdown, display
 It has surpassed all models of the same size in almost all benchmark tests and is better suited to meet the practical needs of complex multilingual tasks. Compared to larger models, SUS-Chat-34B remains highly competitive and achieved state-of-the-art performance in our comprehensive evaluations.
 
 SUS-Chat powerfully demonstrates that through the right instruction fine-tuning, academic institutions can achieve better performance without increasing model parameters, using open-source datasets and models. This bridges the gap between academia and industry in large language models and opens new possibilities for collaboration between academic and industrial sectors.
+
+
+```{python}
+#| echo: false
+
+import evaluate
+import numpy as np
+import pandas as pd
+import random
+import plotly.graph_objects as go
+from datasets import Dataset, load_dataset
+from IPython.display import Markdown, display
+```
 
 # Performance
 
