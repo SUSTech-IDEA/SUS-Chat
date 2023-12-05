@@ -65,7 +65,8 @@
 # News
 
 - 2023-12-05: SUS-Chat is ranked 2nd in [Open LLM
-  leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard).
+  leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+  and surpassed all models under 70B.
 
 - 2023-12-01: SUS-Chat-34B is now avaliable on HuggingFace🤗.
 
@@ -83,8 +84,8 @@ model, the SUS-Chat-34B model has improved the model’s response to human
 instructions through high-quality instruction fine-tuning and excels at
 imitating human thought processes through chains of thought. It
 introduces inter-instruction attention sharing in long texts, expanding
-the window length from 4K to 8K, significantly enhancing the usability
-of multi-round dialogues.
+the window size from 4K to 8K, significantly enhancing the usability of
+multi-round dialogues.
 
 It has surpassed all models of the same size in almost all benchmark
 tests and is better suited to meet the practical needs of complex
@@ -129,7 +130,9 @@ similar scale and achieved the most advanced comprehensive performance.
 | OrionStar-34B     |     68.51 |      66.88 |      65.13 | 54.36 | 62.88 |  12.8 |      77.27 | 80.19 |     84.54 |      53.24 |   62.58 |
 | Yi-34B-Chat       |     66.96 |      55.16 |      77.16 | 63.76 | 61.54 | 10.02 |      76.64 | 70.66 |     82.29 |      54.57 |  61.876 |
 
-<img src="assets/radar.png" id="fig-bench" alt="Figure 2: Benchmark" />
+<img
+src="https://github.com/SUSTech-IDEA/SUS-Chat/raw/main/assets/radar.png"
+id="fig-bench" alt="Figure 2: Benchmark" />
 
 # Usage
 
@@ -145,7 +148,7 @@ def chat_template(messages):
     history = ""
     for message in messages:
         match message:
-            case {"role": "human", "content": message}:
+            case {"role": "user", "content": message}:
                 history += f"### Human: {message}\n\n### Assistant: "
             case {"role": "assistant", "content": message}:
                 history += message
