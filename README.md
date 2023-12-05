@@ -1,8 +1,9 @@
-# 🐗SUS-Chat: Instruction tuning done right
+# 🐷SUS-Chat: Instruction tuning done right
 
 <p align="left">
-    <a href="README_CN.md">中文</a>&nbsp ｜ &nbspEnglish&nbsp
+<a href="README_CN.md">中文</a>&nbsp ｜ &nbspEnglish&nbsp
 </p>
+
 <br><br>
 
 <div align="center">
@@ -63,30 +64,61 @@
 
 # News
 
-- 2021-12-01: SUS-Chat-34B发布
+- 2023-12-05: SUS-Chat is ranked 2nd in [Open LLM
+  leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard).
+
+- 2023-12-01: SUS-Chat-34B is now avaliable on HuggingFace🤗.
 
 # Inrtoduction
 
-![](https://hackmd.io/_uploads/HJlDtzhBa.png)
+<img src="https://hackmd.io/_uploads/HJlDtzhBa.png" id="fig-sus"
+alt="Figure 1: DALL·E 2023-12-01 11.03.28 - An imposing, majestic wild boar combined with elements of a futuristic transformer robot. The boar itself should be intricately blended with these tra" />
 
-**SUS-Chat**
-是一个34B的中英文对话模型，由南方科技大学和粤港澳大湾区数字经济研究院联合发布。SUS-Chat-34B模型在数百万高质、多语言的指令数据上进行了微调，在保持基础模型强大的语言能力的同时，SUS-Chat-34B模型通过高质量指令微调改善了模型对人类指令的响应方式并擅长通过思维链的方式模仿人类思考过程。
+**SUS-Chat** is a 34B bilingual Chinese-English dialogue model, jointly
+released by the **Southern University of Science and Technology** and
+**International Digital Economy Academy**. The SUS-Chat-34B model has
+been fine-tuned on millions of high-quality, multilingual instruction
+data. While maintaining the strong language capabilities of the base
+model, the SUS-Chat-34B model has improved the model’s response to human
+instructions through high-quality instruction fine-tuning and excels at
+imitating human thought processes through chains of thought. It
+introduces inter-instruction attention sharing in long texts, expanding
+the window length from 4K to 8K, significantly enhancing the usability
+of multi-round dialogues.
 
-它在几乎所有基准测试中超过了所有同尺寸的模型，而且能够更好地满足了复杂多语言任务的实际需求，相比于更大的模型，SUS-Chat-34B仍具有相当竞争力，在我们的综合评测中取得了最先进的表现。
+It has surpassed all models of the same size in almost all benchmark
+tests and is better suited to meet the practical needs of complex
+multilingual tasks. Compared to larger models, SUS-Chat-34B remains
+highly competitive and achieved state-of-the-art performance in our
+comprehensive evaluations.
 
-SUS-Chat有力地证明了通过正确的指令微调，学术机构可以在不增加模型参数的情况下，通过开源的数据集和模型，获得更好的性能,
-这弥合了学术界和工业界的在大语言模型上的差距，为学术界和工业界的合作提供了新的可能性。
+SUS-Chat powerfully demonstrates that through the right instruction
+fine-tuning, academic institutions can achieve better performance
+without increasing model parameters, using open-source datasets and
+models. This bridges the gap between academia and industry in large
+language models and opens new possibilities for collaboration between
+academic and industrial sectors.
 
 # Performance
 
-为了更好地评估SUS-Chat-34B模型的性能，我们在多个基准测试中进行了评估，并开源了评估框架[TLEM](https://huggingface.co/spaces/SUSTech/tlem)，以便于其他研究人员进行复现和比较。
+To better evaluate the performance of the SUS-Chat-34B model, we
+conducted assessments across multiple benchmark tests and have
+open-sourced the evaluation framework
+[TLEM](https://huggingface.co/spaces/SUSTech/tlem) to facilitate
+replication and comparison by other researchers.
 
-在TLEM中，我们使用了多个基准测试，包括：MMLU, CMMLU, C-Eval, BBH,
-GSM-8K, MATH,
-专注于衡量模型的知识和思维能力，在这些指标中SUS-Chat-34B模型取得了最先进的表现，我们还额外引入了[lm-eval](https://github.com/EleutherAI/lm-evaluation-harness)测试了SUS-Chat和同类模型在winogrande,
-hellaswag, arc, truthful-qa的表现, 衡量模型的常识性推理能力和幻觉。
+In TLEM, we utilized various benchmark tests including MMLU, CMMLU,
+C-Eval, BBH, GSM-8K, and MATH, focusing on measuring the model’s
+knowledge and thinking capabilities. In these metrics, the SUS-Chat-34B
+model achieved state-of-the-art performance. Additionally, we
+incorporated
+[lm-eval](https://github.com/EleutherAI/lm-evaluation-harness) to test
+SUS-Chat and similar models on winogrande, hellaswag, arc, and
+truthful-qa, assessing the model’s common-sense reasoning ability and
+susceptibility to illusions.
 
-综合上看，SUS-Chat-34B模型显著领先于同规模的模型，并取得了最先进的综合性能。
+Overall, the SUS-Chat-34B model significantly outperformed models of
+similar scale and achieved the most advanced comprehensive performance.
 
 | model             | mmlu-chat | cmmlu-chat | ceval-chat | gsm8k |   BBH |  MATH | winogrande |   arc | hellaswag | truthfulqa | average |
 |:------------------|----------:|-----------:|-----------:|------:|------:|------:|-----------:|------:|----------:|-----------:|--------:|
@@ -97,11 +129,13 @@ hellaswag, arc, truthful-qa的表现, 衡量模型的常识性推理能力和幻
 | OrionStar-34B     |     68.51 |      66.88 |      65.13 | 54.36 | 62.88 |  12.8 |      77.27 | 80.19 |     84.54 |      53.24 |   62.58 |
 | Yi-34B-Chat       |     66.96 |      55.16 |      77.16 | 63.76 | 61.54 | 10.02 |      76.64 | 70.66 |     82.29 |      54.57 |  61.876 |
 
-![](assets/radar.png)
+<img src="assets/radar.png" id="fig-bench" alt="Figure 2: Benchmark" />
 
-# 用法
+# Usage
 
-SUS-Chat-34B是标准的LLaMA模型，使用方法和开发环境与大多数其它开源模型相同，可以通过以下方式进行多轮对话
+SUS-Chat-34B is a standard LLaMA model and should be seamlessly
+compatible with the LLaMA ecosystem. We provide the following example to
+demonstrate how it can be used for multi-turn dialogues.
 
 ``` python
 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -148,16 +182,31 @@ response = tokenizer.decode(
 messages.append({"role": "assistant", "content": response})
 ```
 
-# 限制
+# Limitations
 
-SUS-Chat只进行了监督微调，尚未进行人类偏好学习，因此在一些情况下可能会产生不合理的回复，并放大某些语言模型现有的问题,
-包括幻觉、非确定性和累积误差,
-为了实现更有利于下游任务的性能，我们建议相应地调整生成是配置参数。
+SUS-Chat has only undergone supervised fine-tuning and has not yet been
+trained on human preference learning. As a result, it may produce
+unreasonable responses in some situations and exacerbate existing issues
+in language models, including hallucinations, non-determinism, and
+cumulative errors. To achieve better performance for downstream tasks,
+we recommend adjusting the generation configuration parameters
+accordingly.
 
-# 免责声明
+# Disclaimer
 
-我们在训练过程中使用数据合规检查算法，尽力确保训练模型的合规性。由于数据复杂且语言模型使用场景多样，我们无法保证模型在所有情况下生成正确和合理的输出。请注意，模型仍然存在产生问题输出的风险。对于因滥用、误导、非法使用和相关错误信息以及相关数据安全问题而导致的任何风险和问题，我们将不承担责任。
+During the training process, we used data compliance check algorithms to
+ensure the compliance of the training model as much as possible. Due to
+the complexity of the data and the diverse use cases of language models,
+we cannot guarantee that the model will produce correct and reasonable
+outputs in all scenarios. Please be aware that there is still a risk of
+the model generating problematic outputs. We will not be responsible for
+any risks or issues arising from misuse, misguidance, illegal use, and
+related misinformation, as well as data security issues related to the
+model.
 
-# 许可
+# License
 
-该模型完全开发供学术研究和免费商业使用，但需要遵守来自零一万物的[许可](https://github.com/SUSTech-IDEA/SUS-Chat/blob/main/MODEL_LICENSE_AGREEMENT.txt)
+This model is developed entirely for academic research and free
+commercial use, but it must adhere to the
+[license](https://github.com/SUSTech-IDEA/SUS-Chat/blob/main/MODEL_LICENSE_AGREEMENT.txt)
+from 01-ai.
