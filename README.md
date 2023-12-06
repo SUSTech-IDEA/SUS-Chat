@@ -279,5 +279,5 @@ model.
 
 This model is developed entirely for academic research and free
 commercial use, but it must adhere to the
-[license](https://github.com/SUSTech-IDEA/SUS-Chat/blob/main/MODEL_LICENSE_AGREEMENT.txt)
+[license](https://github.com/01-ai/Yi/blob/main/MODEL_LICENSE_AGREEMENT.txt)
 from [01-ai](https://huggingface.co/01-ai).
