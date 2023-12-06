@@ -71,7 +71,7 @@
 
 - 2023-12-01: SUS-Chat-34B is now avaliable on HuggingFace🤗.
 
-# Inrtoduction
+# Introduction
 
 <img src="https://hackmd.io/_uploads/HJlDtzhBa.png" id="fig-sus"
 alt="Figure 1: DALL·E 2023-12-01 11.03.28 - An imposing, majestic wild boar combined with elements of a futuristic transformer robot. The boar itself should be intricately blended with these tra" />
@@ -79,15 +79,15 @@ alt="Figure 1: DALL·E 2023-12-01 11.03.28 - An imposing, majestic wild boar co
 **SUS-Chat** is a 34B bilingual Chinese-English dialogue model, jointly
 released by the **Southern University of Science and Technology** and
 **Cognitive Computing and Natural Language Center of International
-Digital Economy Academy (IDEA-CCNL)**. The SUS-Chat-34B model has been
-fine-tuned on millions of high-quality, multilingual instruction data.
-While maintaining the strong language capabilities of the base model,
-the SUS-Chat-34B model has improved the model’s response to human
-instructions through high-quality instruction fine-tuning and excels at
-imitating human thought processes through chains of thought. It
-introduces inter-instruction attention sharing in long texts, expanding
-the window size from 4K to 8K, significantly enhancing the usability of
-multi-round dialogues.
+Digital Economy Academy (IDEA-CCNL)**. This model is based on
+`01-ai/Yi-34B` and has been fine-tuned on millions of high-quality,
+multilingual instruction data. While maintaining the strong language
+capabilities of the base model, the SUS-Chat-34B model has improved the
+model’s response to human instructions through high-quality instruction
+fine-tuning and excels at imitating human thought processes through
+chains of thought. It introduces inter-instruction attention sharing in
+long texts, expanding the window size from 4K to 8K, significantly
+enhancing the usability of multi-round dialogues.
 
 It has surpassed all models of the same size in almost all benchmark
 tests and is better suited to meet the practical needs of complex
