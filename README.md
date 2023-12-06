@@ -32,7 +32,7 @@
 <div style="display: inline-block;">
 
 <a rel="noopener nofollow" href="https://www.modelscope.cn/organization/sustc/">
-<img src="https://img.shields.io/badge/ModelScope-sustc-blue" style="margin: 0 0;">
+<img src="https://img.shields.io/badge/🤖ModelScope-sustc-blue" style="margin: 0 0;">
 </a>
 
 </div>
@@ -139,9 +139,10 @@ susceptibility to illusions.
 
 Overall, the SUS-Chat-34B model significantly outperformed models of
 similar scale and achieved the most advanced comprehensive performance.
+
 <img
 src="https://github.com/SUSTech-IDEA/SUS-Chat/raw/main/assets/radar.png"
-id="fig-bench" alt="Benchmark" />
+id="fig-bench" alt="Figure 2: Benchmark" />
 
 ## English Understanding
 
@@ -197,9 +198,8 @@ id="fig-bench" alt="Benchmark" />
 | OrionStar-Yi-34B-Chat |   60.21   |
 |           Yi-34B-Chat |   59.72   |
 
-<img
-src="https://github.com/SUSTech-IDEA/SUS-Chat/raw/main/assets/radar.png"
-id="fig-bench" alt="Figure 2: Benchmark" />
+To reproduce the results, please start a vllm server and refer to
+[here](https://sustech-tlem.static.hf.space/index.html#start-evaluating-your-model-in-3-line).
 
 # Usage
 
@@ -208,8 +208,8 @@ compatible with the LLaMA ecosystem. We provide the following example to
 demonstrate how it can be used for multi-turn dialogues.
 
 ``` python
-from transformers import AutoModelForCausalLM, AutoTokenizer
-
+from transformers import AutoModelForCausalLM, AutoTokenizer # 🤗 Transformers, or 
+# from modelscope import AutoModelForCausalLM, AutoTokenizer # 🤖 ModelScope
 
 def chat_template(messages):
     history = ""

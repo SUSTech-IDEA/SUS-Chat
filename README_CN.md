@@ -32,7 +32,7 @@
 <div style="display: inline-block;">
 
 <a rel="noopener nofollow" href="https://www.modelscope.cn/organization/sustc/">
-<img src="https://img.shields.io/badge/ModelScope-sustec-blue" style="margin: 0 0;">
+<img src="https://img.shields.io/badge/🤖ModelScope-sustc-blue" style="margin: 0 0;">
 </a>
 
 </div>
@@ -166,12 +166,15 @@ hellaswag, arc, truthful-qa的表现, 衡量模型的常识性推理能力和幻
 | OrionStar-Yi-34B-Chat |   60.21   |
 |           Yi-34B-Chat |   59.72   |
 
+要复现我们的结果，请启动一个VLLM服务器并参考[这里](https://sustech-tlem.static.hf.space/index.html#start-evaluating-your-model-in-3-line)。
+
 # 用法
 
 SUS-Chat-34B是标准的LLaMA模型，应该可以无缝地与LLaMA生态系统兼容，我们提供下面的例子来展示如何使用它进行多轮对话
 
 ``` python
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers import AutoModelForCausalLM, AutoTokenizer # 🤗 Transformers, or 
+# from modelscope import AutoModelForCausalLM, AutoTokenizer # 🤖 ModelScope
 
 
 def chat_template(messages):
