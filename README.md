@@ -65,7 +65,10 @@
 
 # News
 
-- 2023-12-05: SUS-Chat is ranked 2nd in [Open LLM
+- 2023-12-06: Try [SUS-Chat-34B
+  chat-ui](https://huggingface.co/spaces/SUSTech/SUS-Chat-34B).
+
+- 2023-12-05: SUS-Chat-34B is ranked 2nd in [Open LLM
   leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
   and surpassed all models under 70B.
 
