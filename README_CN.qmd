@@ -228,4 +228,4 @@ SUS-Chat只进行了监督微调，尚未进行人类偏好学习，因此在一
 
 # 许可
 
-该模型完全开发供学术研究和免费商业使用，但需要遵守来自零一万物的[许可](https://github.com/SUSTech-IDEA/SUS-Chat/blob/main/MODEL_LICENSE_AGREEMENT.txt)
+该模型完全开发供学术研究和免费商业使用，但需要遵守来自[零一万物](https://huggingface.co/01-ai)的[许可](https://github.com/SUSTech-IDEA/SUS-Chat/blob/main/MODEL_LICENSE_AGREEMENT.txt)
