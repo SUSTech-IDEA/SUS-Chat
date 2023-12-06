@@ -103,19 +103,22 @@ multilingual tasks. Compared to larger models, SUS-Chat-34B remains
 highly competitive and has achieved state-of-the-art performance in our
 comprehensive evaluations.
 
-SUS-Chat-34B model has the following highlights: 1. Large-scale complex
-instruction following data: Trained with 1.4 billion tokens of
-high-quality complex instruction data, covering Chinese and English,
-multi-turn dialogues, mathematics, reasoning, and various other types of
-instruction data; 2. Strong performance in general tasks: The
-SUS-Chat-34B model excels in numerous mainstream Chinese and English
-tasks, surpassing other open-source instruction fine-tuned models of the
-same parameter scale. It also competes well against models with larger
-parameter scales; 3. Longer context window and excellent multi-turn
-dialogue capabilities: Currently, SUS-Chat-34B supports an 8K context
-window, and is trained with a large amount of multi-turn instruction and
-single-multi-turn mixed data, demonstrating remarkable capabilities in
-long-text dialogue information focus and instruction follow-up.
+SUS-Chat-34B model has the following highlights:
+
+1.  Large-scale complex instruction following data: Trained with 1.4
+    billion tokens of high-quality complex instruction data, covering
+    Chinese and English, multi-turn dialogues, mathematics, reasoning,
+    and various other types of instruction data;
+2.  Strong performance in general tasks: The SUS-Chat-34B model excels
+    in numerous mainstream Chinese and English tasks, surpassing other
+    open-source instruction fine-tuned models of the same parameter
+    scale. It also competes well against models with larger parameter
+    scales;
+3.  Longer context window and excellent multi-turn dialogue
+    capabilities: Currently, SUS-Chat-34B supports an 8K context window,
+    and is trained with a large amount of multi-turn instruction and
+    single-multi-turn mixed data, demonstrating remarkable capabilities
+    in long-text dialogue information focus and instruction follow-up.
 
 SUS-Chat powerfully demonstrates that through the right instruction
 fine-tuning, academic institutions can achieve better performance
