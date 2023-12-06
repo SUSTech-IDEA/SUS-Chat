@@ -73,7 +73,7 @@ jupyter:
 
 ![](https://hackmd.io/_uploads/HJlDtzhBa.png)
 
-**SUS-Chat-34B**模型是[南方科技大学](https://huggingface.co/SUSTech)联合[IDEA研究院封神榜团队](https://huggingface.co/IDEA-CCNL)开源的通用大模型，
+**SUS-Chat-34B**模型是[南方科技大学](https://huggingface.co/SUSTech)联合[IDEA研究院CCNL团队](https://huggingface.co/IDEA-CCNL)开源的通用大模型，
 2023-12-05在Huggingface的权威榜单上[open_llm_leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)取得了同级别模型最好成绩。
 
 SUS-Chat-34B是一个340亿参数规模的双语模型，基于[01-ai/Yi-34B](https://huggingface.co/01-ai/Yi-34B-Chat)预训练模型通过数百万高质量、多语言的指令数据进行了微调。
