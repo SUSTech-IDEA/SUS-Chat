@@ -96,6 +96,8 @@ Overall, the SUS-Chat-34B model significantly outperformed models of similar sca
 
 ![Benchmark](https://github.com/SUSTech-IDEA/SUS-Chat/raw/main/assets/radar.png){#fig-bench}
 
+::: {layout-ncol=2}
+
 ## English Understanding
 
 |                 Model |    mmlu (0-shot)    |
@@ -118,6 +120,7 @@ Overall, the SUS-Chat-34B model significantly outperformed models of similar sca
 | OrionStar-Yi-34B-Chat |        66.88        |        65.13        |
 |           Yi-34B-Chat |        55.16        |        77.16        |
 
+:::
 
 ## Math & Reasoning
 
@@ -141,7 +144,7 @@ Overall, the SUS-Chat-34B model significantly outperformed models of similar sca
 | OrionStar-Yi-34B-Chat |        77.27        |        80.19        |        84.54        |          36.47          |          53.24          |
 |           Yi-34B-Chat |        76.64        |        70.66        |        82.29        |          38.19          |          54.57          |
 
-## Average
+## Overall
 
 |                 Model |  Average  |
 | ---------------------:|:---------:|
