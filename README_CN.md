@@ -65,6 +65,9 @@
 
 # 新闻
 
+- 2023-12-06: [SUS-Chat-34B
+  chat-ui](https://huggingface.co/spaces/SUSTech/SUS-Chat-34B)
+
 - 2023-12-05: SUS-Chat-34B在[Open LLM
   leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)排名第二，并在所有小于70B的模型中排名第一。
 
