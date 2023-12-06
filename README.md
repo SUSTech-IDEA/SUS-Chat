@@ -78,10 +78,11 @@ alt="Figure 1: DALL·E 2023-12-01 11.03.28 - An imposing, majestic wild boar co
 
 **SUS-Chat** is a 34B bilingual Chinese-English dialogue model, jointly
 released by the **Southern University of Science and Technology** and
-**International Digital Economy Academy**. The SUS-Chat-34B model has
-been fine-tuned on millions of high-quality, multilingual instruction
-data. While maintaining the strong language capabilities of the base
-model, the SUS-Chat-34B model has improved the model’s response to human
+**Cognitive Computing and Natural Language Center of International
+Digital Economy Academy (IDEA-CCNL)**. The SUS-Chat-34B model has been
+fine-tuned on millions of high-quality, multilingual instruction data.
+While maintaining the strong language capabilities of the base model,
+the SUS-Chat-34B model has improved the model’s response to human
 instructions through high-quality instruction fine-tuning and excels at
 imitating human thought processes through chains of thought. It
 introduces inter-instruction attention sharing in long texts, expanding
