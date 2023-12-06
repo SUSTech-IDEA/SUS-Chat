@@ -76,9 +76,9 @@ jupyter:
 **SUS-Chat-34B**模型是[南方科技大学](https://huggingface.co/SUSTech)联合[IDEA研究院CCNL团队](https://huggingface.co/IDEA-CCNL)开源的通用大模型，
 2023-12-05在Huggingface的权威榜单上[open_llm_leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)取得了同级别模型最好成绩。
 
-SUS-Chat-34B是一个340亿参数规模的双语模型，基于[01-ai/Yi-34B](https://huggingface.co/01-ai/Yi-34B-Chat)预训练模型通过数百万高质量、多语言的指令数据进行了微调。
+SUS-Chat-34B是一个340亿参数规模的双语模型，基于[01-ai/Yi-34B](https://huggingface.co/01-ai/Yi-34B)预训练模型通过数百万高质量、多语言的指令数据进行了微调。
 在保持基础模型强大的语言能力的同时，SUS-Chat-34B模型通过高质量指令微调改善了模型对人类指令的响应方式，并擅长通过思维链的方式模仿人类思考过程。
-与[Yi-34B](https://huggingface.co/01-ai/Yi-34B-Chat)和[Yi-34B-chat](https://huggingface.co/01-ai/Yi-34B-Chat)相比，它不仅在几乎所有基准测试中提升了性能，而且能够更好地满足了复杂多语言任务的实际需求。
+与[Yi-34B](https://huggingface.co/01-ai/Yi-34B)和[Yi-34B-chat](https://huggingface.co/01-ai/Yi-34B-Chat)相比，它不仅在几乎所有基准测试中提升了性能，而且能够更好地满足了复杂多语言任务的实际需求。
 在指令微调阶段，我们加入了大量高质量长文本和多轮对话指令数据，将文本窗口从基础模型的4K扩展到8K。
 这种扩展有助于模型更有效地遵循多轮对话中的指令，显著减少在扩展对话和长文本理解中上下文丢失的问题。为此我们也开发了更高效的训练框架，不久也将进行开源，敬请期待。
 
