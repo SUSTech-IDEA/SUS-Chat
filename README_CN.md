@@ -37,6 +37,9 @@
 
 </div>
 
+<a href="https://wisemodel.cn/organization/SUSTech">
+<img src="https://img.shields.io/badge/WiseModel-SUSTech-blue"> </a>
+
 <div style="display: inline-block;">
 
 <a rel="noopener nofollow" href="https://github.com/SUSTech-IDEA/SUS-Chat/blob/main/LICENSE">
