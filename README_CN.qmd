@@ -107,28 +107,35 @@ hellaswag, arc, truthful-qa的表现, 衡量模型的常识性推理能力和幻
 
 以下是评测结果：
 
-## 英文理解能力
+::: {layout-ncol=2}
+
+## 英文能力
 
 |                 Model |    mmlu (0-shot)    |
 | ---------------------:|:-------------------:|
 |                 GPT-4 |         83          |
-|          SUS-Chat-34B | $\underline{74.35}$ |
+|          SUS-Chat-34B | [74.35]{.underline} |
 |         Qwen-72b-Chat |      **74.52**      |
 |     Deepseek-68b-Chat |        69.43        |
 | OrionStar-Yi-34B-Chat |        68.51        |
 |           Yi-34B-Chat |        66.96        |
 
-
 ## 中文能力
 
-|                 Model |   cmmlu (0-shot)    |   C-Eval (0-shot)   |
+|                 Model |   cmmlu (0-shot)    |   C-Eval (0-shot)[^1]   |
 | ---------------------:|:-------------------:|:-------------------:|
 |                 GPT-4 |         71          |        69.9         |
 |          SUS-Chat-34B |      **78.68**      |      **82.42**      |
-|         Qwen-72b-Chat | $\underline{77.02}$ | $\underline{77.22}$ |
+|         Qwen-72b-Chat | [77.02]{.underline} | [77.22]{.underline} |
 |     Deepseek-68b-Chat |        48.51        |        59.7         |
 | OrionStar-Yi-34B-Chat |        66.88        |        65.13        |
 |           Yi-34B-Chat |        55.16        |        77.16        |
+
+[^1]: C-Eval 结果在验证集上得到。
+
+
+
+:::
 
 ## 数学与推理能力
 
@@ -138,8 +145,8 @@ hellaswag, arc, truthful-qa的表现, 衡量模型的常识性推理能力和幻
 | ---------------------:|:-------------------:|:-------------------:|:-------------------:|
 |                 GPT-4 |        91.4         |        45.8         |        86.7         |
 |          SUS-Chat-34B |      **80.06**      |        28.7         |        67.62        |
-|         Qwen-72b-Chat | $\underline{76.57}$ |      **35.9**       |      **72.63**      |
-|     Deepseek-68b-Chat |        74.45        | $\underline{29.56}$ | $\underline{69.73}$ |
+|         Qwen-72b-Chat | [76.57]{.underline} |      **35.9**       |      **72.63**      |
+|     Deepseek-68b-Chat |        74.45        | [29.56]{.underline} | [69.73]{.underline} |
 | OrionStar-Yi-34B-Chat |        54.36        |        12.8         |        62.88        |
 |           Yi-34B-Chat |        63.76        |        10.02        |        61.54        |
 
@@ -148,9 +155,9 @@ hellaswag, arc, truthful-qa的表现, 衡量模型的常识性推理能力和幻
 |                 Model | winogrande (5-shot) |    arc (25-shot)    | hellaswag (10-shot) | TruthfulQA mc1 (0-shot) | TruthfulQA mc2 (0-shot) |
 | ---------------------:|:-------------------:|:-------------------:|:-------------------:|:-----------------------:|:-----------------------:|
 |                 GPT-4 |         ---         |        94.5         |        91.4         |          59.00          |           ---           |
-|          SUS-Chat-34B |      **81.22**      | $\underline{81.54}$ |        83.79        |        **40.64**        |        **57.47**        |
-|         Qwen-72b-Chat |        76.09        |      **82.10**      | $\underline{86.06}$ |          39.17          |   $\underline{56.37}$   |
-|     Deepseek-68b-Chat | $\underline{80.58}$ |        81.29        |      **87.02**      |   $\underline{40.02}$   |          50.64          |
+|          SUS-Chat-34B |      **81.22**      | [81.54]{.underline} |        83.79        |        **40.64**        |        **57.47**        |
+|         Qwen-72b-Chat |        76.09        |      **82.10**      | [86.06]{.underline} |          39.17          |   [56.37]{.underline}   |
+|     Deepseek-68b-Chat | [80.58]{.underline} |        81.29        |      **87.02**      |   [40.02]{.underline}   |          50.64          |
 | OrionStar-Yi-34B-Chat |        77.27        |        80.19        |        84.54        |          36.47          |          53.24          |
 |           Yi-34B-Chat |        76.64        |        70.66        |        82.29        |          38.19          |          54.57          |
 
@@ -172,8 +179,8 @@ SUS-Chat-34B是标准的LLaMA模型，应该可以无缝地与LLaMA生态系统�
 
 ```{python}
 #| eval: false
-from transformers import AutoModelForCausalLM, AutoTokenizer # 🤗 Transformers, or 
-# from modelscope import AutoModelForCausalLM, AutoTokenizer # 🤖 ModelScope
+# from transformers import AutoModelForCausalLM, AutoTokenizer # 🤗 Transformers, or 
+from modelscope import AutoModelForCausalLM, AutoTokenizer # 🤖 ModelScope
 
 
 def chat_template(messages):
@@ -187,7 +194,8 @@ def chat_template(messages):
     return history
 
 
-model_path = "SUSTech/SUS-Chat-34B"
+# model_path = "SUSTech/SUS-Chat-34B"
+model_path = "SUSTC/SUS-Chat-34B" # ModelScope
 
 tokenizer = AutoTokenizer.from_pretrained(model_path, use_fast=False)
 model = AutoModelForCausalLM.from_pretrained(

@@ -1,0 +1,11 @@
+---
+license: other
+license_name: yi-license
+license_link: LICENSE
+widget:
+  - example_title: SUS-Chat
+    text: hi
+    output:
+      text: ' Hello! How can I assist you today?'
+pipeline_tag: text-generation
+---
