@@ -110,51 +110,142 @@ hellaswag, arc, truthful-qa的表现, 衡量模型的常识性推理能力和幻
 
 以下是评测结果：
 
-## 英文理解能力
+<div>
 
-|                 Model |    mmlu (0-shot)    |
-|----------------------:|:-------------------:|
-|                 GPT-4 |         83          |
-|          SUS-Chat-34B | $\underline{74.35}$ |
-|         Qwen-72b-Chat |      **74.52**      |
-|     Deepseek-68b-Chat |        69.43        |
-| OrionStar-Yi-34B-Chat |        68.51        |
-|           Yi-34B-Chat |        66.96        |
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><div width="50.0%"
+data-layout-align="center">
+<h2 id="英文能力">英文能力</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Model</th>
+<th style="text-align: center;">mmlu (0-shot)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">GPT-4</td>
+<td style="text-align: center;">83</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">SUS-Chat-34B</td>
+<td style="text-align: center;"><u>74.35</u></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Qwen-72b-Chat</td>
+<td style="text-align: center;"><strong>74.52</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Deepseek-68b-Chat</td>
+<td style="text-align: center;">69.43</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">OrionStar-Yi-34B-Chat</td>
+<td style="text-align: center;">68.51</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Yi-34B-Chat</td>
+<td style="text-align: center;">66.96</td>
+</tr>
+</tbody>
+</table>
+</div></td>
+<td style="text-align: center;"><div width="50.0%"
+data-layout-align="center">
+<h2 id="中文能力">中文能力</h2>
+<table>
+<colgroup>
+<col style="width: 34%" />
+<col style="width: 32%" />
+<col style="width: 32%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Model</th>
+<th style="text-align: center;">cmmlu (0-shot)</th>
+<th style="text-align: center;">C-Eval (0-shot)<a href="#fn1"
+class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">GPT-4</td>
+<td style="text-align: center;">71</td>
+<td style="text-align: center;">69.9</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">SUS-Chat-34B</td>
+<td style="text-align: center;"><strong>78.68</strong></td>
+<td style="text-align: center;"><strong>82.42</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Qwen-72b-Chat</td>
+<td style="text-align: center;"><u>77.02</u></td>
+<td style="text-align: center;"><u>77.22</u></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Deepseek-68b-Chat</td>
+<td style="text-align: center;">48.51</td>
+<td style="text-align: center;">59.7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">OrionStar-Yi-34B-Chat</td>
+<td style="text-align: center;">66.88</td>
+<td style="text-align: center;">65.13</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Yi-34B-Chat</td>
+<td style="text-align: center;">55.16</td>
+<td style="text-align: center;">77.16</td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>C-Eval 结果在验证集上得到。<a href="#fnref1"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
-## 中文能力
-
-|                 Model |   cmmlu (0-shot)    |   C-Eval (0-shot)   |
-|----------------------:|:-------------------:|:-------------------:|
-|                 GPT-4 |         71          |        69.9         |
-|          SUS-Chat-34B |      **78.68**      |      **82.42**      |
-|         Qwen-72b-Chat | $\underline{77.02}$ | $\underline{77.22}$ |
-|     Deepseek-68b-Chat |        48.51        |        59.7         |
-| OrionStar-Yi-34B-Chat |        66.88        |        65.13        |
-|           Yi-34B-Chat |        55.16        |        77.16        |
+</div>
 
 ## 数学与推理能力
 
 在GSM8K（数学逻辑）的评测都是目前开源模型最强。
 
-|                 Model |   gsm8k (0-shot)    |    MATH (0-shot)    |    BBH (0-shot)     |
-|----------------------:|:-------------------:|:-------------------:|:-------------------:|
-|                 GPT-4 |        91.4         |        45.8         |        86.7         |
-|          SUS-Chat-34B |      **80.06**      |        28.7         |        67.62        |
-|         Qwen-72b-Chat | $\underline{76.57}$ |      **35.9**       |      **72.63**      |
-|     Deepseek-68b-Chat |        74.45        | $\underline{29.56}$ | $\underline{69.73}$ |
-| OrionStar-Yi-34B-Chat |        54.36        |        12.8         |        62.88        |
-|           Yi-34B-Chat |        63.76        |        10.02        |        61.54        |
+|                 Model | gsm8k (0-shot) | MATH (0-shot) | BBH (0-shot) |
+|----------------------:|:--------------:|:-------------:|:------------:|
+|                 GPT-4 |      91.4      |     45.8      |     86.7     |
+|          SUS-Chat-34B |   **80.06**    |     28.7      |    67.62     |
+|         Qwen-72b-Chat |  <u>76.57</u>  |   **35.9**    |  **72.63**   |
+|     Deepseek-68b-Chat |     74.45      | <u>29.56</u>  | <u>69.73</u> |
+| OrionStar-Yi-34B-Chat |     54.36      |     12.8      |    62.88     |
+|           Yi-34B-Chat |     63.76      |     10.02     |    61.54     |
 
 ## 其他任务能力
 
-|                 Model | winogrande (5-shot) |    arc (25-shot)    | hellaswag (10-shot) | TruthfulQA mc1 (0-shot) | TruthfulQA mc2 (0-shot) |
-|----------------------:|:-------------------:|:-------------------:|:-------------------:|:-----------------------:|:-----------------------:|
-|                 GPT-4 |          —          |        94.5         |        91.4         |          59.00          |            —            |
-|          SUS-Chat-34B |      **81.22**      | $\underline{81.54}$ |        83.79        |        **40.64**        |        **57.47**        |
-|         Qwen-72b-Chat |        76.09        |      **82.10**      | $\underline{86.06}$ |          39.17          |   $\underline{56.37}$   |
-|     Deepseek-68b-Chat | $\underline{80.58}$ |        81.29        |      **87.02**      |   $\underline{40.02}$   |          50.64          |
-| OrionStar-Yi-34B-Chat |        77.27        |        80.19        |        84.54        |          36.47          |          53.24          |
-|           Yi-34B-Chat |        76.64        |        70.66        |        82.29        |          38.19          |          54.57          |
+|                 Model | winogrande (5-shot) | arc (25-shot) | hellaswag (10-shot) | TruthfulQA mc1 (0-shot) | TruthfulQA mc2 (0-shot) |
+|----------------------:|:-------------------:|:-------------:|:-------------------:|:-----------------------:|:-----------------------:|
+|                 GPT-4 |          —          |     94.5      |        91.4         |          59.00          |            —            |
+|          SUS-Chat-34B |      **81.22**      | <u>81.54</u>  |        83.79        |        **40.64**        |        **57.47**        |
+|         Qwen-72b-Chat |        76.09        |   **82.10**   |    <u>86.06</u>     |          39.17          |      <u>56.37</u>       |
+|     Deepseek-68b-Chat |    <u>80.58</u>     |     81.29     |      **87.02**      |      <u>40.02</u>       |          50.64          |
+| OrionStar-Yi-34B-Chat |        77.27        |     80.19     |        84.54        |          36.47          |          53.24          |
+|           Yi-34B-Chat |        76.64        |     70.66     |        82.29        |          38.19          |          54.57          |
 
 ## 综合能力
 
@@ -173,8 +264,8 @@ hellaswag, arc, truthful-qa的表现, 衡量模型的常识性推理能力和幻
 SUS-Chat-34B是标准的LLaMA模型，应该可以无缝地与LLaMA生态系统兼容，我们提供下面的例子来展示如何使用它进行多轮对话
 
 ``` python
-from transformers import AutoModelForCausalLM, AutoTokenizer # 🤗 Transformers, or 
-# from modelscope import AutoModelForCausalLM, AutoTokenizer # 🤖 ModelScope
+# from transformers import AutoModelForCausalLM, AutoTokenizer # 🤗 Transformers, or 
+from modelscope import AutoModelForCausalLM, AutoTokenizer # 🤖 ModelScope
 
 
 def chat_template(messages):
@@ -188,7 +279,8 @@ def chat_template(messages):
     return history
 
 
-model_path = "SUSTech/SUS-Chat-34B"
+# model_path = "SUSTech/SUS-Chat-34B"
+model_path = "SUSTC/SUS-Chat-34B" # ModelScope
 
 tokenizer = AutoTokenizer.from_pretrained(model_path, use_fast=False)
 model = AutoModelForCausalLM.from_pretrained(

@@ -327,6 +327,7 @@ def chat_template(messages):
 
 
 model_path = "SUSTech/SUS-Chat-34B"
+# model_path = "SUSTC/SUS-Chat-34B" # ModelScope
 
 tokenizer = AutoTokenizer.from_pretrained(model_path, use_fast=False)
 model = AutoModelForCausalLM.from_pretrained(
