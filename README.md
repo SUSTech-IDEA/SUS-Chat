@@ -68,6 +68,14 @@
 
 # News
 
+- 2023-12-09: 🔥 `Tigerbot` variant has been
+  [deleted](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard/discussions/438),
+  `SUS-Chat-34B` is now the the top-ranked LLaMA model and the
+  top-ranked chat model.
+
+- 2023-12-07: SUS-Chat-34B is now available on
+  [WiseModel🧠](https://wisemodel.cn/model/SUSTech/SUS-Chat-34B).
+
 - 2023-12-06: Try [SUS-Chat-34B
   chat-ui](https://huggingface.co/spaces/SUSTech/SUS-Chat-34B).
 
