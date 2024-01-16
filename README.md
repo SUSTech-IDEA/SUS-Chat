@@ -69,7 +69,8 @@
 # News
 
 - 2024-1-04: 🔥 `cloudyu` created a series of top ranked
-  [MOE](cloudyu/Yi-34Bx2-MoE-60B) based on our model
+  [MOE](https://huggingface.co/cloudyu/Yi-34Bx2-MoE-60B) based on our
+  model
 
 - 2023-12-09: 🔥 `Tigerbot` variant has been
   [deleted](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard/discussions/438),
