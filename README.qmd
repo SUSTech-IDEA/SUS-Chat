@@ -67,6 +67,8 @@ jupyter:
 
 # News
 
+- 2024-1-04: 🔥 `cloudyu` created a series of top ranked [MOE](cloudyu/Yi-34Bx2-MoE-60B) based on our model
+
 - 2023-12-09: 🔥 `Tigerbot` variant has been [deleted](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard/discussions/438), `SUS-Chat-34B` is now the the top-ranked LLaMA model and the top-ranked chat model.
 
 - 2023-12-07: SUS-Chat-34B is now available on [WiseModel🧠](https://wisemodel.cn/model/SUSTech/SUS-Chat-34B). 
